@@ -2,7 +2,7 @@ import pygame
 import random
 import json
 pygame.init()
-WIDTH, HEIGHT = 800, 600
+WIDTH, HEIGHT = 1200, 800
 TILE_SIZE = 15
 WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
@@ -23,15 +23,7 @@ world = []
 for row in range(HEIGHT // TILE_SIZE):
     new_row = []
     for col in range(WIDTH // TILE_SIZE):
-        rand = random.random()
-        if rand < 0.1:
-            new_row.append(STONE)
-        elif rand < 0.2:
-            new_row.append(WATER)
-        elif rand < 0.3:
             new_row.append(GRASS)
-        else:
-            new_row.append(EMPTY)
     world.append(new_row)
 selected_block = GRASS
 grass_img = pygame.image.load("sp3.png").convert_alpha()
@@ -125,4 +117,3 @@ while running:
     pygame.display.flip()
     pygame.time.Clock().tick(30)
 pygame.quit()
-
