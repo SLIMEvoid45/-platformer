@@ -15,7 +15,7 @@ GRASS = 1
 STONE = 2
 WATER = 3
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("2D Minecraft")
+pygame.display.set_caption("lolgcghjkljhxfghj")
 player_pos = [WIDTH // 2, HEIGHT // 2]
 player_size = 40
 player_speed = 5
