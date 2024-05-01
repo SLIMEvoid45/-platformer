@@ -84,13 +84,15 @@ while running:
         elif event.type == pygame.MOUSEBUTTONDOWN:
             mouse_pos = pygame.mouse.get_pos()
             click_x = mouse_pos[0] // TILE_SIZE
-            if 0 <= click_x < len(world[0]) and 0 <= click_y < len(world):
+            click_y = mouse_pos[1] // TILE_SIZE  
+            if 0 <= click_x < len(world[0]) and 0 <= click_y < len(world):  
                 if event.button == 1: 
                     if world[click_y][click_x] != EMPTY:
                         world[click_y][click_x] = EMPTY
                 elif event.button == 3: 
                     if world[click_y][click_x] == EMPTY:
                         world[click_y][click_x] = selected_block
+
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP: 
                 if player_pos[1] >= 0:
@@ -123,3 +125,4 @@ while running:
     pygame.display.flip()
     pygame.time.Clock().tick(30)
 pygame.quit()
+
