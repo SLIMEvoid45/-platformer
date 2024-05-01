@@ -23,7 +23,9 @@ world = []
 for row in range(HEIGHT // TILE_SIZE):
     new_row = []
     for col in range(WIDTH // TILE_SIZE):
-            new_row.append(GRASS)
+
+            new_row.append(STONE)
+
     world.append(new_row)
 selected_block = GRASS
 grass_img = pygame.image.load("sp3.png").convert_alpha()
@@ -117,3 +119,4 @@ while running:
     pygame.display.flip()
     pygame.time.Clock().tick(30)
 pygame.quit()
+
